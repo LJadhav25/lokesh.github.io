@@ -21,6 +21,7 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -723,6 +724,7 @@
     <script src="js/main.js"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script type="text/javascript">
         emailjs.init('rpOpb12gDTUKyP3BK')
 
@@ -739,11 +741,11 @@
             emailjs.sendForm(serviceID, templateID, this)
                 .then(function () {
                     btn.innerText = 'Send Message';
-                    alert('Message sent successfully!');
+                    toastr.success('Message sent successfully!');
                     document.getElementById('contactForm').reset();
                 }, function (error) {
                     btn.innerText = 'Send Message';
-                    alert('Failed to send message. Please try again.');
+                    toastr.error('Failed to send message. Please try again.');
                     console.error('Failed to send message:', error);
                 });
         });
