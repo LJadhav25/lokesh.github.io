@@ -740,6 +740,7 @@
                 .then(function () {
                     btn.innerText = 'Send Message';
                     alert('Message sent successfully!');
+                    document.getElementById('contactForm').reset();
                 }, function (error) {
                     btn.innerText = 'Send Message';
                     alert('Failed to send message. Please try again.');
