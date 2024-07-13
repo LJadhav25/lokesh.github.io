@@ -700,7 +700,7 @@
     <!-- Footer End -->
 
     <!-- Scroll to Bottom -->
-    <a href="#"><i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i></a>
+    <a href="#" onclick="scrollToAbout()"><i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i></a>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -748,6 +748,11 @@
                     console.error('Failed to send message:', error);
                 });
         });
+
+        function scrollToAbout() {
+            // Scroll smoothly to the 'about' section
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 
 </body>
